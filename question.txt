@@ -1,0 +1,106 @@
+Project Assignment: Build a Backend-Only Love Calculator Using Pure Node.js
+
+Objective
+
+Create a backend-only *Love Calculator* that takes two names, simulates a playful love analysis, calculates individual "love scores", computes an average score, and returns a tailored love recommendation.
+
+You must use *only Node.js core modules* — no Express or other frameworks.
+
+
+What You’ll Build
+
+A Node.js server that:
+
+* Accepts two names via a POST request
+* Simulates a love analysis using delayed steps
+* Calculates a random score for each name
+* Computes the average percentage
+* Returns a message based on that average
+* Saves the results in two separate files
+
+
+Functional Requirements
+
+  1. Set Up a Basic HTTP Server
+
+* Use Node’s built-in http module to create the server.
+* It should only respond to POST requests at the /calculate endpoint.
+
+2. Accept JSON Data from Postman
+
+* Accept a JSON body with two fields:
+
+  
+  {
+    "name1": "Alice",
+    "name2": "Bob"
+  }
+  
+
+ 3. Simulate Multi-Step Analysis
+
+Use setTimeout() to fake a fun love analysis:
+
+* After 1 second: Log “Calculating compatibility...”
+* After 2 seconds: Log “Analyzing hearts...”
+* After 3 seconds: Log “Generating result...”
+
+4. Generate Individual Love Scores
+
+* Generate a *random score between 0 and 100 for each name*.
+* Calculate the *average* of both scores.
+
+ 5. Return a Tailored Recommendation
+
+Use the *average score* to determine the final message:
+
+| Average Score | Recommendation                 |
+| ------------- | ------------------------------ |
+| 0–30          | Uh-oh... Maybe stay friends    |
+| 31–60         | There's potential. Keep trying |
+| 61–85         | You both are a great match     |
+| 86–100        | Perfect soulmates              |
+
+
+Example Output (Client Response)
+
+
+{
+  "name1": "Alice",
+  "name2": "Bob",
+  "score1": 56,
+  "score2": 78,
+  "average": 67,
+  "message": "You both are a great match"
+}
+
+
+Save Results to Files
+
+Store each analysis result in **two ways**:
+
+ 1. `results.json`
+
+Append each record as a structured JSON object:
+
+
+{
+  "name1": "Alice",
+  "score1": 56,
+  "name2": "Bob",
+  "score2": 78,
+  "average": 67,
+  "message": "You both are a great match"
+}
+
+
+ 2. results.txt
+
+Append a human-readable summary like:
+
+Alice scored 56%
+Bob scored 78%
+Average: 67% - You both are a great match..
+
+
+Project defense is Friday, 1st August 2025
