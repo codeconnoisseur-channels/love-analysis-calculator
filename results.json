@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "name1": "Alice",
+    "name2": "Bob",
+    "score1": 8,
+    "score2": 53,
+    "average": 30.5,
+    "message": "There's potential. Keep trying"
+  },
+  {
+    "name1": "Ovie",
+    "name2": "Chidera",
+    "score1": 59,
+    "score2": 17,
+    "average": 38,
+    "message": "There's potential. Keep trying"
+  },
+  {
+    "name1": "Patrick",
+    "name2": "Princess",
+    "score1": 78,
+    "score2": 59,
+    "average": 68.5,
+    "message": "You both are a great match"
+  },
+  {
+    "name1": "Bright",
+    "name2": "Beatrice",
+    "score1": 86,
+    "score2": 71,
+    "average": 78.5,
+    "message": "You both are a great match"
+  }
+]
